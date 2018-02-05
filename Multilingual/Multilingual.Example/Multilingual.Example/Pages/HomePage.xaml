@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:Multilingual.Example.Extensions;assembly=Multilingual.Example"
+             xmlns:pages="clr-namespace:Multilingual.Example.PageModels;assembly=Multilingual.Example"
+             xmlns:controls="clr-namespace:Multilingual.Example.Controls;assembly=Multilingual.Example"
+             x:Class="Multilingual.Example.Pages.HomePage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <pages:HomePageModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#424242">
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="{extensions:Translate Welcome}" FontSize="18" TextColor="#ffffff" HorizontalTextAlignment="Center"/>
+                    <Label Text="ThunderSL" FontSize="20" FontAttributes="Bold" TextColor="#ffffff" HorizontalTextAlignment="Center"/>
+                    <Label Text="sl.xamarin.multilingual" FontSize="20" FontAttributes="Italic" TextColor="#ffffff" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="50">
+                    <controls:CircleImage Source="{extensions:Image Multilingual.Example.Resources.Images.profil.jpg}" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+            <Button Text="{extensions:Translate ChangeLanguage}" TextColor="#ffffff" FontSize="16" HeightRequest="50" Command="{Binding ChangeLanguageCommand}" BackgroundColor="#212121" VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

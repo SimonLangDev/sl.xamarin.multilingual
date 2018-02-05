@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pageModels="clr-namespace:Multilingual.Example.PageModels;assembly=Multilingual.Example"
+             xmlns:extensions="clr-namespace:Multilingual.Example.Extensions;assembly=Multilingual.Example"
+             xmlns:controls="clr-namespace:Multilingual.Example.Controls;assembly=Multilingual.Example"
+             x:Class="Multilingual.Example.Pages.LanguagePage"
+             Title="{extensions:Translate Languages}">
+    
+    <ContentPage.BindingContext>
+        <pageModels:LanguagePageModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#424242">
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Label Text="{extensions:Translate SelectLanguage}" FontSize="20" TextColor="#ffffff" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="50" MinimumWidthRequest="256">
+                    <controls:CPicker PositiveText="{extensions:Translate Ok}" NegativeText="{extensions:Translate Cancel}" ItemsSource="{Binding Languages}" TextColor="#ffffff" ItemDisplayBinding="{Binding Name}" SelectedIndex="{Binding SelectedIndex}" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+            <Button Text="{extensions:Translate Accept}" TextColor="#ffffff" FontSize="16" HeightRequest="50" Command="{Binding AcceptCommand}" BackgroundColor="#212121" VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
