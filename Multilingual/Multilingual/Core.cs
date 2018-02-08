@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Threading;
 
-namespace Plugin
+namespace Multilingual
 {
     /// <summary>
     /// Cross platform multilingual implemenation
     /// </summary>
-    public class Multilingual
+    public class MultilingualCore
     {
         private static readonly Lazy<IMultilingual> Implementation = new Lazy<IMultilingual>(Create, LazyThreadSafetyMode.PublicationOnly);
 

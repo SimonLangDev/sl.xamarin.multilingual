@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace Plugin
+namespace Multilingual
 {
     /// <summary>
     /// Interface for Multilingual

@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Plugin\Plugin.csproj" />
+    <ProjectReference Include="..\..\Multilingual\Multilingual.csproj" />
   </ItemGroup>
 
   <ItemGroup>

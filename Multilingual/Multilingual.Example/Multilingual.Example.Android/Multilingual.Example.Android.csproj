@@ -94,10 +94,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Plugin\Plugin.csproj">
-      <Project>{DA3E9941-4CF1-40E7-8AED-CF31D3D94B6D}</Project>
-      <Name>Plugin</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Multilingual.Example\Multilingual.Example.csproj">
       <Project>{B4978523-8775-4FAE-8FD5-69782D584A7D}</Project>
       <Name>Multilingual.Example</Name>

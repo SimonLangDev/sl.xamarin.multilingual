@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Threading;
 
-namespace Plugin
+namespace Multilingual
 {
     /// <summary>
     /// Implementation of multilingual

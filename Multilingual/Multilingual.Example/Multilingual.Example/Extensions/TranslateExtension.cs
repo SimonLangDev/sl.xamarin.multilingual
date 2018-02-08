@@ -21,7 +21,7 @@ namespace Multilingual.Example.Extensions
 			if (CurrentCulture == null)
 				return "";
 
-		    var info = Plugin.Multilingual.Current.CurrentCultureInfo;
+		    var info = MultilingualCore.Current.CurrentCultureInfo;
 			var translation = ResManager.Value.GetString(CurrentCulture, info);
 
 			if (translation == null)

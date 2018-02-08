@@ -41,7 +41,7 @@ namespace Multilingual.Example.PageModels
                     Languages = JsonConvert.DeserializeObject<List<Language>>(JsonConvert.SerializeObject(json["languages"]));
 
                     //Get current culture info
-                    var info = Plugin.Multilingual.Current.CurrentCultureInfo;
+                    var info = MultilingualCore.Current.CurrentCultureInfo;
 
                     for (var i=0; i<Languages.Count ;i++)
                     {
@@ -59,8 +59,8 @@ namespace Multilingual.Example.PageModels
                 return new Command(() =>
                 {
                     var test = Languages[SelectedIndex].Abbreviation;
-                    Plugin.Multilingual.Current.CurrentCultureInfo = new CultureInfo(test);
-                    AppResources.Culture = Plugin.Multilingual.Current.CurrentCultureInfo;
+                    MultilingualCore.Current.CurrentCultureInfo = new CultureInfo(test);
+                    AppResources.Culture = MultilingualCore.Current.CurrentCultureInfo;
 
                     var page = new NavigationPage(new HomePage())
                     {
